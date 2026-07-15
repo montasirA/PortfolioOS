@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+{{ blog.title }}
+{% endblock %}
+
+{% block content %}
+{% include "includes/navbar.html" %}
+
+<section class="blog-detail">
+    <div class="container">
+
+        <!-- Blog Header -->
+        <div class="blog-header">
+            <span class="blog-category">
+                {{ blog.category }}
+            </span>
+
+            <h1>{{ blog.title }}</h1>
+
+            <div class="blog-meta">
+                <span>🕒 {{ blog.reading_time }} min read</span>
+                <span>📅 {{ blog.created_at|date:"F d, Y" }}</span>
+            </div>
+        </div>
+
+        <!-- Blog Cover -->
+        <div class="blog-cover">
+            {% if blog.cover_image %}
+                <img src="{{ blog.cover_image.url }}" alt="{{ blog.title }}">
+            {% endif %}
+        </div>
+
+        <!-- Blog Body -->
+        <div class="blog-body">
+            {{ blog.content|linebreaks }}
+        </div>
+
+        <!-- Back Button -->
+        <div class="blog-back">
+            <a href="{% url 'blog_list' %}" class="btn btn-secondary">
+                ← Back to Blogs
+            </a>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

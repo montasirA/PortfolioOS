@@ -1,0 +1,17 @@
+django-admin --version --> 6.0.7
+pip install django
+pip install pillow
+pip install python-decouple
+pip install whitenoise
+
+creating requirements file
+pip freeze > requirements.txt
+
+templates/
+static/
+media/
+apps/
+
+abcd8901 - password
+Montasir
+arafinmontasir8@gmail.com

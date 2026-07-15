@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Blogs
+{% endblock %}
+
+{% block content %}
+{% include "includes/navbar.html" %}
+
+<section class="blog-page">
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="section-heading">
+            <span class="section-tag">BLOG</span>
+            <h2>My Articles ✍️</h2>
+            <p>Thoughts, tutorials and development journey.</p>
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="blog-grid">
+            {% for blog in blogs %}
+                <div class="blog-card">
+                    {% if blog.cover_image %}
+                        <img src="{{ blog.cover_image.url }}" alt="{{ blog.title }}">
+                    {% endif %}
+
+                    <div class="blog-content">
+                        <span>{{ blog.category }}</span>
+                        <h3>{{ blog.title }}</h3>
+                        <p>{{ blog.short_description }}</p>
+                        <a href="{% url 'blog_detail' blog.slug %}">
+                            Read Article →
+                        </a>
+                    </div>
+                </div>
+            {% empty %}
+                <h2>No Blogs Found</h2>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+{% endblock %}
