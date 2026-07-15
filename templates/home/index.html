@@ -406,37 +406,119 @@ FEATURED PROJECTS
 
 
 <section class="contact" id="contact">
+
     <div class="container">
+
         <div class="section-heading">
             <span class="section-tag">CONTACT</span>
             <h2>Let's Work Together ✨</h2>
+            <p>
+                Have a project in mind? Feel free to reach out.
+            </p>
         </div>
 
         <div class="contact-wrapper">
+
             <!-- Contact Info -->
             <div class="contact-info">
+
                 <h3>Get In Touch</h3>
+
                 {% if contact %}
-                    <p>{{ contact.email }}</p>
-                    <p>{{ contact.phone }}</p>
-                    <p>{{ contact.location }}</p>
+
+                    <p>
+                        📧 <strong>Email</strong><br>
+                        <a href="mailto:{{ contact.email }}">
+                            {{ contact.email }}
+                        </a>
+                    </p>
+
+                    <p>
+                        📞 <strong>Phone</strong><br>
+                        <a href="tel:{{ contact.phone }}">
+                            {{ contact.phone }}
+                        </a>
+                    </p>
+
+                    <p>
+                        📍 <strong>Location</strong><br>
+                        {{ contact.location }}
+                    </p>
+
+                    {% if contact.github %}
+                    <p>
+                        🐙 <strong>GitHub</strong><br>
+                        <a href="{{ contact.github }}" target="_blank">
+                            {{ contact.github }}
+                        </a>
+                    </p>
+                    {% endif %}
+
+                    {% if contact.linkedin %}
+                    <p>
+                        💼 <strong>LinkedIn</strong><br>
+                        <a href="{{ contact.linkedin }}" target="_blank">
+                            {{ contact.linkedin }}
+                        </a>
+                    </p>
+                    {% endif %}
+
+                    {% if contact.facebook %}
+                    <p>
+                        📘 <strong>Facebook</strong><br>
+                        <a href="{{ contact.facebook }}" target="_blank">
+                            {{ contact.facebook }}
+                        </a>
+                    </p>
+                    {% endif %}
+
+                    {% if contact.instagram %}
+                    <p>
+                        📷 <strong>Instagram</strong><br>
+                        <a href="{{ contact.instagram }}" target="_blank">
+                            {{ contact.instagram }}
+                        </a>
+                    </p>
+                    {% endif %}
+
+                    {% if contact.whatsapp %}
+                    <p>
+                        💬 <strong>WhatsApp</strong><br>
+                        <a href="https://wa.me/{{ contact.whatsapp }}" target="_blank">
+                            {{ contact.whatsapp }}
+                        </a>
+                    </p>
+                    {% endif %}
+
                 {% else %}
-                    <p>No contact info available.</p>
+
+                    <p>No contact information available.</p>
+
                 {% endif %}
+
             </div>
 
             <!-- Contact Form -->
             <div class="contact-form">
+
                 <form method="POST">
+
                     {% csrf_token %}
+
                     {{ form.as_p }}
+
                     <button class="btn btn-primary" type="submit">
                         Send Message
                     </button>
+
                 </form>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
 
