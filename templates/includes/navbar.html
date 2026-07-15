@@ -1,26 +1,49 @@
 <nav class="navbar">
+
     <div class="container navbar-wrapper">
 
         <!-- Logo -->
+
         <a href="{% url 'home' %}" class="logo">
+
             <div class="logo-box">
                 MA
             </div>
+
         </a>
 
+        <!-- Hamburger -->
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
         <!-- Navigation -->
-        <ul class="nav-links">
+
+        <ul class="nav-links" id="navLinks">
+
             <li><a href="{% url 'home' %}#about">About</a></li>
+
             <li><a href="{% url 'home' %}#projects">Projects</a></li>
+
             <li><a href="{% url 'home' %}#skills">Skills</a></li>
+
             <li><a href="{% url 'blog_list' %}">Blog</a></li>
+
             <li><a href="{% url 'home' %}#contact">Contact</a></li>
+
+            <li>
+
+                <a href="#" class="btn btn-primary">
+
+                    Resume
+
+                </a>
+
+            </li>
+
         </ul>
 
-        <!-- Right Side -->
-        <div class="nav-actions">
-            <a href="#" class="btn btn-primary">Resume</a>
-            <button class="menu-btn">☰</button>
-        </div>
     </div>
+
 </nav>
