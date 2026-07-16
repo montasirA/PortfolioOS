@@ -1,0 +1,58 @@
+:root{
+
+    /* ===============================
+       COLORS
+    ================================ */
+
+    --bg-color:#FFF8F1;
+    --surface:#FFFFFF;
+
+    --text:#1B1B1B;
+    --text-light:#555555;
+
+    --primary:#FF7A59;
+    --secondary:#5B8DEF;
+
+    --yellow:#FFD54A;
+    --green:#51CF66;
+    --pink:#FF74A6;
+    --purple:#A56EFF;
+
+    --border:#1B1B1B;
+
+    /* ===============================
+       BORDER
+    ================================ */
+
+    --border-width:3px;
+
+    --radius-sm:12px;
+    --radius-md:20px;
+    --radius-lg:32px;
+    --radius-xl:48px;
+
+    /* ===============================
+       SHADOW
+    ================================ */
+
+    --shadow-sm:4px 4px 0 var(--border);
+
+    --shadow-md:6px 6px 0 var(--border);
+
+    --shadow-lg:8px 8px 0 var(--border);
+
+    /* ===============================
+       SPACING
+    ================================ */
+
+    --section-space:120px;
+
+    --container:1280px;
+
+    /* ===============================
+       TRANSITION
+    ================================ */
+
+    --transition:.35s ease;
+
+}

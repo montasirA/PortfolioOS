@@ -1,0 +1,220 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Space Grotesk",sans-serif;
+    background:var(--bg-color);
+    color:var(--text);
+    line-height:1.5;
+
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* ===========================
+   GLOBAL FIX
+=========================== */
+
+body,
+section,
+.container,
+.navbar,
+.navbar-wrapper{
+    overflow:visible;
+}
+
+main{
+    overflow:visible;
+}
+
+/* ===========================
+   IMAGES
+=========================== */
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* ===========================
+   LIST
+=========================== */
+
+ul{
+    list-style:none;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button{
+    border:none;
+    background:none;
+    font-family:inherit;
+    cursor:pointer;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+    width:min(92%,var(--container));
+    margin-inline:auto;
+    position:relative;
+}
+
+/* ===========================
+   SECTION
+=========================== */
+
+section{
+    padding:var(--section-space) 0;
+    position:relative;
+}
+
+/* ===========================
+   HEADING
+=========================== */
+
+h1{
+    font-size:clamp(3rem,8vw,7rem);
+    line-height:.95;
+    font-weight:700;
+}
+
+h2{
+    font-size:clamp(2rem,5vw,4rem);
+}
+
+h3{
+    font-size:1.5rem;
+}
+
+/* ===========================
+   PARAGRAPH
+=========================== */
+
+p{
+    color:var(--text-light);
+    font-size:1.05rem;
+}
+
+/* ===========================
+   BUTTON STYLE
+=========================== */
+
+.btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    padding:16px 28px;
+
+    border:3px solid var(--border);
+    border-radius:999px;
+
+    font-weight:700;
+
+    transition:var(--transition);
+}
+
+.btn-primary{
+
+    background:var(--primary);
+    color:#fff;
+
+}
+
+.btn-secondary{
+
+    background:#fff;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.card{
+
+    background:#fff;
+
+    border:3px solid var(--border);
+
+    border-radius:28px;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/* ===========================
+   STICKER
+=========================== */
+
+.sticker{
+
+    position:absolute;
+
+    z-index:2;
+
+}
+
+/* ===========================
+   MOBILE FIX
+=========================== */
+
+@media (max-width:900px){
+
+    body{
+
+        overflow-x:hidden;
+
+    }
+
+    .container{
+
+        width:94%;
+
+    }
+
+}

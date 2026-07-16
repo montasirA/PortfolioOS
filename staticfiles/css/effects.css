@@ -1,0 +1,73 @@
+body{
+
+    font-family:"Space Grotesk",sans-serif;
+
+    position:relative;
+
+    overflow-x:hidden;
+
+}
+
+
+
+.bg-blur{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    z-index:-1;
+
+    opacity:.35;
+
+}
+
+
+
+.bg1{
+
+    width:320px;
+
+    height:320px;
+
+    background:#FFD93D;
+
+    top:-80px;
+
+    left:-80px;
+
+}
+
+
+
+.bg2{
+
+    width:350px;
+
+    height:350px;
+
+    background:#FF70A6;
+
+    right:-120px;
+
+    top:220px;
+
+}
+
+
+
+.bg3{
+
+    width:300px;
+
+    height:300px;
+
+    background:#66D9FF;
+
+    bottom:-100px;
+
+    left:35%;
+
+}
