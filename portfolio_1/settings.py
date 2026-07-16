@@ -58,60 +58,41 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "portfolio_1.wsgi.application"
 
-
 # ================= DATABASE =================
-
 DATABASES = {
     "default": dj_database_url.parse(
         "postgresql://montasir:cdN8TgiBDt9DYpDZX7uwW3htt2KWJG0n@dpg-d9bt8hgjs32c73eto8d0-a.oregon-postgres.render.com/portfolio_db_kb3k"
     )
 }
-
 # ============================================
 
-
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
-    },
+    {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
+    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
+    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
+    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 
 LANGUAGE_CODE = "en-us"
-
 TIME_ZONE = "UTC"
-
 USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = "/static/"
-
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
-
+STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
-
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-import cloudinary
+# ================= CLOUDINARY =================
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": "aosfzjoe",
+    "API_KEY": "939683777938242",
+    "API_SECRET": "iaHWZrkOTUis6mZxDI2p9-BAsSU",
+}
 
-cloudinary.config(
-    cloud_name="aosfzjoe",
-    api_key="939683777938242",
-    api_secret="iaHWZrkOTUis6mZxDI2p9-BAsSU",
-)
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
 STORAGES = {
     "default": {
@@ -121,3 +102,4 @@ STORAGES = {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
+# =============================================
