@@ -1,49 +1,31 @@
-<nav class="navbar">
+{% load static %}
 
+<nav class="navbar" id="navbar">
     <div class="container navbar-wrapper">
 
         <!-- Logo -->
-
         <a href="{% url 'home' %}" class="logo">
-
-            <div class="logo-box">
-                MA
-            </div>
-
+        <span class="logo-text">蒙塔西尔</span>
         </a>
 
         <!-- Hamburger -->
-
         <button class="menu-btn" id="menuBtn">
             ☰
         </button>
 
         <!-- Navigation -->
-
         <ul class="nav-links" id="navLinks">
-
             <li><a href="{% url 'home' %}#about">About</a></li>
-
             <li><a href="{% url 'home' %}#projects">Projects</a></li>
-
             <li><a href="{% url 'home' %}#skills">Skills</a></li>
-
             <li><a href="{% url 'blog_list' %}">Blog</a></li>
-
             <li><a href="{% url 'home' %}#contact">Contact</a></li>
-
             <li>
-
-                <a href="#" class="btn btn-primary">
-
+                <a href="#" class="resume-btn">
                     Resume
-
                 </a>
-
             </li>
-
         </ul>
 
     </div>
-
 </nav>
