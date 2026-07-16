@@ -214,98 +214,83 @@
    MOBILE
 =========================== */
 
-@media(max-width:900px){
+@media (max-width:900px){
 
-.navbar{
+    .menu-btn{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        z-index:10002;
+    }
 
-    top:10px;
-    padding:10px 0;
+    .nav-links{
 
-}
+        position:absolute;
 
-.navbar-wrapper{
+        top:100%;
 
-    padding:16px 20px;
+        left:0;
+        right:0;
 
-}
+        width:100%;
 
-.menu-btn{
+        margin-top:15px;
 
-    display:flex;
+        padding:28px;
 
-}
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:22px;
 
-.nav-links{
+        background:#FBBBB3;
 
-    position:absolute;
+        border:3px solid #1F1F1F;
 
-    top:88px;
-    left:0;
+        border-radius:24px;
 
-    width:100%;
+        box-shadow:8px 8px 0 #1F1F1F;
 
-    display:flex;
-    flex-direction:column;
+        opacity:0;
+        visibility:hidden;
+        pointer-events:none;
 
-    gap:24px;
+        transform:translateY(-15px);
 
-    padding:30px;
+        transition:.35s ease;
 
-    background:#FBBBB3;
+        z-index:9999;
 
-    border:3px solid #1F1F1F;
+    }
 
-    border-radius:24px;
+    .nav-links.active{
 
-    box-shadow:
-        8px 8px 0 #1F1F1F;
+        opacity:1;
+        visibility:visible;
+        pointer-events:auto;
 
-    opacity:0;
+        transform:translateY(0);
 
-    visibility:hidden;
+    }
 
-    transform:translateY(-20px);
+    .nav-links li{
 
-    transition:.35s;
+        width:100%;
+        text-align:center;
 
-}
+    }
 
-.nav-links.active{
+    .nav-links a{
 
-    opacity:1;
+        display:block;
 
-    visibility:visible;
+        width:100%;
 
-    transform:translateY(0);
+        padding:12px;
 
-}
+        font-size:18px;
+        font-weight:700;
 
-.nav-links li{
-
-    width:100%;
-
-    text-align:center;
-
-}
-
-.nav-links a{
-
-    font-size:18px;
-
-    display:block;
-
-}
-
-.resume-btn{
-
-    display:block;
-
-}
-
-.logo-text{
-
-    font-size:22px;
-
-}
+    }
 
 }
