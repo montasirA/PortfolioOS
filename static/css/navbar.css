@@ -1,13 +1,14 @@
-/* ===========================
-   RETRO PINK NAVBAR
-=========================== */
+/* =========================================================
+   NAVBAR
+========================================================= */
 
 .navbar{
     position:sticky;
     top:14px;
-    z-index:9999;
+    z-index:99999;
     padding:14px 0;
     transition:.35s ease;
+    overflow:visible;
 }
 
 .navbar.scrolled{
@@ -20,6 +21,8 @@
     align-items:center;
     justify-content:space-between;
 
+    position:relative;
+
     padding:16px 30px;
 
     background:#FBBBB3;
@@ -27,24 +30,20 @@
     border:3px solid #1F1F1F;
     border-radius:28px;
 
-    box-shadow:
-        8px 8px 0 #1F1F1F;
+    box-shadow:8px 8px 0 #1F1F1F;
 
-    position:relative;
-
-    overflow:hidden;
+    overflow:visible;
 
 }
 
-/* ===========================
+/* =========================================================
    LOGO
-=========================== */
+========================================================= */
 
 .logo{
 
     display:flex;
     align-items:center;
-    text-decoration:none;
     flex-shrink:0;
 
 }
@@ -53,15 +52,12 @@
 
     font-size:28px;
     font-weight:700;
-
     color:#1F1F1F;
 
     font-family:
-        "Noto Serif SC",
-        "Noto Sans SC",
-        serif;
-
-    letter-spacing:1px;
+    "Noto Serif SC",
+    "Noto Sans SC",
+    serif;
 
     transition:.3s;
 
@@ -73,17 +69,15 @@
 
 }
 
-/* ===========================
+/* =========================================================
    NAVIGATION
-=========================== */
+========================================================= */
 
 .nav-links{
 
     display:flex;
     align-items:center;
-    gap:36px;
-
-    list-style:none;
+    gap:34px;
 
 }
 
@@ -95,13 +89,11 @@
 
 .nav-links a{
 
+    text-decoration:none;
     color:#222;
 
     font-size:16px;
-
     font-weight:700;
-
-    text-decoration:none;
 
     position:relative;
 
@@ -125,12 +117,11 @@
     bottom:-8px;
 
     width:0;
-
     height:3px;
 
-    border-radius:999px;
-
     background:#C7446F;
+
+    border-radius:999px;
 
     transition:.3s;
 
@@ -142,21 +133,26 @@
 
 }
 
-/* ===========================
+/* =========================================================
    RESUME BUTTON
-=========================== */
+========================================================= */
 
 .resume-btn{
 
-    background:#FFF7E9;
-
-    color:#111 !important;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
 
     padding:12px 24px;
 
-    border-radius:999px;
+    background:#FFF7E9;
 
     border:3px solid #1F1F1F;
+    border-radius:999px;
+
+    color:#111 !important;
+
+    font-weight:700;
 
     box-shadow:5px 5px 0 #1F1F1F;
 
@@ -174,9 +170,9 @@
 
 }
 
-/* ===========================
+/* =========================================================
    MENU BUTTON
-=========================== */
+========================================================= */
 
 .menu-btn{
 
@@ -185,18 +181,17 @@
     width:54px;
     height:54px;
 
-    border-radius:50%;
-
-    border:3px solid #1F1F1F;
+    align-items:center;
+    justify-content:center;
 
     background:#FFF7E9;
+
+    border:3px solid #1F1F1F;
+    border-radius:50%;
 
     color:#111;
 
     font-size:24px;
-
-    align-items:center;
-    justify-content:center;
 
     cursor:pointer;
 
@@ -210,38 +205,56 @@
 
 }
 
-/* ===========================
+/* =========================================================
    MOBILE
-=========================== */
+========================================================= */
 
 @media (max-width:900px){
 
+    .navbar{
+
+        top:10px;
+        padding:10px 0;
+
+    }
+
+    .navbar-wrapper{
+
+        padding:16px 22px;
+
+        border-radius:24px;
+
+    }
+
     .menu-btn{
+
         display:flex;
-        align-items:center;
-        justify-content:center;
-        z-index:10002;
+
+        position:relative;
+
+        z-index:100001;
+
     }
 
     .nav-links{
 
         position:absolute;
 
-        top:100%;
+        top:calc(100% + 14px);
 
         left:0;
         right:0;
 
         width:100%;
 
-        margin-top:15px;
-
-        padding:28px;
-
         display:flex;
         flex-direction:column;
+
         align-items:center;
-        gap:22px;
+
+        gap:18px;
+
+        padding:28px;
 
         background:#FBBBB3;
 
@@ -253,13 +266,14 @@
 
         opacity:0;
         visibility:hidden;
+
         pointer-events:none;
 
         transform:translateY(-15px);
 
         transition:.35s ease;
 
-        z-index:9999;
+        z-index:100000;
 
     }
 
@@ -267,6 +281,7 @@
 
         opacity:1;
         visibility:visible;
+
         pointer-events:auto;
 
         transform:translateY(0);
@@ -276,6 +291,7 @@
     .nav-links li{
 
         width:100%;
+
         text-align:center;
 
     }
@@ -289,7 +305,41 @@
         padding:12px;
 
         font-size:18px;
-        font-weight:700;
+
+    }
+
+    .resume-btn{
+
+        width:100%;
+
+    }
+
+}
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width:901px){
+
+    .nav-links{
+
+        opacity:1 !important;
+        visibility:visible !important;
+        pointer-events:auto !important;
+        transform:none !important;
+
+        position:static;
+
+        width:auto;
+
+        padding:0;
+
+        background:none;
+
+        border:none;
+
+        box-shadow:none;
 
     }
 
