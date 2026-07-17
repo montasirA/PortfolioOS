@@ -616,3 +616,247 @@ width:200vw;
 
 
 }
+
+/* =========================
+   MOBILE RESPONSIVE FIX
+========================= */
+
+@media(max-width:768px){
+
+
+.contact {
+
+    padding:70px 15px;
+    overflow:hidden;
+
+}
+
+
+/* hide heavy background code */
+
+.contact-code pre {
+
+    width:220vw;
+    font-size:14px;
+    opacity:.5;
+
+}
+
+
+
+/* wrapper */
+
+.contact-wrapper {
+
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+
+}
+
+
+
+/* cards */
+
+.contact-info,
+.contact-form {
+
+    width:100%;
+
+    padding:22px;
+
+    border-width:3px;
+
+    border-radius:22px;
+
+    box-shadow:
+    6px 6px 0 #111;
+
+}
+
+
+
+/* heading */
+
+.contact-info h3 {
+
+    font-size:24px;
+
+    margin-bottom:22px;
+
+}
+
+
+
+/* info boxes */
+
+.contact-info p {
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:6px;
+
+    padding:14px;
+
+    margin-bottom:15px;
+
+    font-size:14px;
+
+    border-radius:15px;
+
+}
+
+
+
+.contact-info p:hover {
+
+    transform:none;
+
+    box-shadow:none;
+
+}
+
+
+
+/* form */
+
+.contact-form form {
+
+    gap:18px;
+
+}
+
+
+
+.contact-form input,
+.contact-form textarea {
+
+    padding:15px;
+
+    font-size:15px;
+
+    border-radius:15px;
+
+}
+
+
+
+.contact-form textarea {
+
+    min-height:140px;
+
+}
+
+
+
+/* button */
+
+.contact-form .btn {
+
+    padding:16px;
+
+    font-size:16px;
+
+    border-radius:15px;
+
+    box-shadow:
+    5px 5px 0 #111;
+
+}
+
+
+
+.contact-form .btn:hover {
+
+    transform:none;
+
+}
+
+
+
+.contact-form .btn::after {
+
+    right:15px;
+
+    font-size:18px;
+
+}
+
+
+
+}
+
+
+
+
+/* SMALL MOBILE */
+
+@media(max-width:480px){
+
+
+.contact {
+
+    padding:55px 12px;
+
+}
+
+
+
+.contact-info,
+.contact-form {
+
+    padding:18px;
+
+    border-radius:20px;
+
+    box-shadow:
+    5px 5px 0 #111;
+
+}
+
+
+
+.contact-info h3 {
+
+    font-size:22px;
+
+}
+
+
+
+.contact-info p {
+
+    font-size:13px;
+
+}
+
+
+
+.contact-form input,
+.contact-form textarea {
+
+    padding:13px;
+
+}
+
+
+
+.contact-form textarea {
+
+    min-height:120px;
+
+}
+
+
+.contact-form .btn {
+
+    font-size:15px;
+
+    padding:14px;
+
+}
+
+
+}
