@@ -7,6 +7,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("home.urls")),
     path("blog/", include("blog.urls")),   # singular রাখলাম
+    path("projects/", include("projects.urls"),
+),
 ]
 
 if settings.DEBUG:

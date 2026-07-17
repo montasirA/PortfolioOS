@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+{{ project.title }}
+{% endblock %}
+
+{% block content %}
+
+<section class="case-hero">
+
+    <div class="container">
+
+        <div class="case-grid">
+
+            <!-- LEFT -->
+
+            <div class="case-content">
+
+                <span class="case-tag">
+                    CASE STUDY
+                </span>
+
+                <h1>
+                    {{ project.title }}
+                </h1>
+
+                <p class="case-subtitle">
+                    {{ project.short_description }}
+                </p>
+
+                <div class="terminal-box">
+
+<pre><code>$ git clone github.com/montasir/{{ project.slug }}
+
+> Initializing...
+> Installing dependencies...
+> Loading assets...
+> Build completed successfully.</code></pre>
+
+                </div>
+
+                <div class="project-links">
+
+                    {% if project.live_demo %}
+                    <a
+                        href="{{ project.live_demo }}"
+                        class="btn btn-primary"
+                        target="_blank">
+
+                        Live Demo
+
+                    </a>
+                    {% endif %}
+
+                    {% if project.github_link %}
+                    <a
+                        href="{{ project.github_link }}"
+                        class="btn btn-secondary"
+                        target="_blank">
+
+                        GitHub
+
+                    </a>
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="case-image">
+
+                {% if project.cover_image %}
+
+                <img
+                    src="{{ project.cover_image.url }}"
+                    alt="{{ project.title }}"
+                >
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="project-overview">
+
+    <div class="container">
+
+        <div class="content">
+
+            <span class="section-title">
+                Overview
+            </span>
+
+            {{ project.description|linebreaks }}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="project-gallery">
+
+    <div class="container">
+
+        <div class="heading">
+
+            <span class="section-title">
+                Gallery
+            </span>
+
+            <h2>
+                Project Journey
+            </h2>
+
+        </div>
+
+        <div class="bento-gallery">
+
+            {% for image in project.images.all %}
+
+            <div class="bento-item">
+
+                <img
+                    src="{{ image.image.url }}"
+                    alt="{{ image.caption }}"
+                    class="gallery-image"
+                >
+
+                {% if image.caption %}
+                <div class="gallery-caption">
+
+                    {{ image.caption }}
+
+                </div>
+                {% endif %}
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="tech-section">
+
+    <div class="container">
+
+        <span class="section-title">
+            Tech Stack
+        </span>
+
+        <div class="tech-list">
+
+            {% for tech in tech_stack %}
+
+            <span>
+
+                {{ tech }}
+
+            </span>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

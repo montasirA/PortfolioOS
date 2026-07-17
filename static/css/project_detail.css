@@ -1,0 +1,376 @@
+.case-hero{
+
+    padding:140px 0 90px;
+
+}
+
+.case-grid{
+
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+    align-items:center;
+
+}
+
+.case-tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border:2px solid #111;
+
+    border-radius:999px;
+
+    font-size:.8rem;
+
+    letter-spacing:2px;
+
+    margin-bottom:25px;
+
+    font-weight:700;
+
+}
+
+.case-hero h1{
+
+    font-size:clamp(2.6rem,6vw,5rem);
+
+    line-height:1;
+
+    margin-bottom:25px;
+
+}
+
+.case-subtitle{
+
+    font-size:1.1rem;
+
+    opacity:.7;
+
+    line-height:1.9;
+
+    max-width:650px;
+
+}
+
+.terminal-box{
+
+    margin:40px 0;
+
+    background:#101010;
+
+    color:#76ff7a;
+
+    border-radius:20px;
+
+    border:2px solid #222;
+
+    padding:25px;
+
+    overflow:auto;
+
+}
+
+.terminal-box pre{
+
+    margin:0;
+
+    font-size:.95rem;
+
+    line-height:1.8;
+
+}
+
+.project-links{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.case-image img{
+
+    width:100%;
+
+    border-radius:25px;
+
+    border:3px solid #111;
+
+    display:block;
+
+    transition:.4s;
+
+}
+
+.case-image img:hover{
+
+    transform:rotate(-1deg) scale(1.02);
+
+}
+
+.project-overview{
+
+    padding:80px 0;
+
+}
+
+.content{
+
+    max-width:850px;
+
+    margin:auto;
+
+}
+
+.section-title{
+
+    display:inline-block;
+
+    margin-bottom:25px;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:.8rem;
+
+    font-weight:700;
+
+    opacity:.7;
+
+}
+
+.content p{
+
+    line-height:2;
+
+    font-size:1.05rem;
+
+}
+
+/*==========================
+      BENTO GALLERY
+==========================*/
+
+.project-gallery{
+
+    padding:100px 0;
+
+}
+
+.heading{
+
+    margin-bottom:45px;
+
+}
+
+.bento-gallery{
+
+    column-count:3;
+    column-gap:24px;
+
+}
+
+.bento-item{
+
+    break-inside:avoid;
+    margin-bottom:24px;
+
+    border:2px solid #111;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.bento-item:hover{
+
+    transform:translateY(-8px) rotate(-1deg);
+
+    box-shadow:10px 10px 0 #111;
+
+}
+
+.bento-item img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.gallery-caption{
+
+    padding:18px;
+
+    font-size:.95rem;
+
+    line-height:1.7;
+
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.bento-gallery{
+
+column-count:2;
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:576px){
+
+.bento-gallery{
+
+column-count:1;
+
+}
+
+}
+
+.tech-section{
+
+    padding:90px 0;
+
+}
+
+.tech-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-top:30px;
+
+}
+
+.tech-list span{
+
+    padding:12px 20px;
+
+    border:2px solid #111;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+}
+
+@media(max-width:992px){
+
+.case-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.case-image{
+
+order:-1;
+
+}
+
+.case-hero{
+
+padding:110px 0 70px;
+
+}
+
+.case-hero h1{
+
+font-size:3rem;
+
+}
+
+.gallery-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.case-hero h1{
+
+font-size:2.3rem;
+
+}
+
+.terminal-box{
+
+padding:18px;
+
+}
+
+.project-links{
+
+flex-direction:column;
+
+}
+
+.project-links a{
+
+width:100%;
+
+text-align:center;
+
+}
+
+}
+
+/*==========================
+        LIGHTBOX
+==========================*/
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.9);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    padding:30px;
+
+    cursor:zoom-out;
+
+}
+
+.lightbox img{
+
+    max-width:95%;
+
+    max-height:90vh;
+
+    border-radius:18px;
+
+}

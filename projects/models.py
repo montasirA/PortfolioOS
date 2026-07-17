@@ -60,6 +60,32 @@ class Project(models.Model):
 
         super().save(*args, **kwargs)
 
+class ProjectImage(models.Model):
+    project = models.ForeignKey(
+        Project,
+        on_delete=models.CASCADE,
+        related_name="images"
+    )
+
+    image = models.ImageField(
+        upload_to="projects/gallery/"
+    )
+
+    caption = models.CharField(
+        max_length=255,
+        blank=True
+    )
+
+    display_order = models.PositiveIntegerField(
+        default=0
+    )
+
+    class Meta:
+        ordering = ["display_order"]
+
+    def __str__(self):
+        return f"{self.project.title} Image"
+
     def __str__(self):
         return self.title
 

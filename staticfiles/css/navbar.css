@@ -18,21 +18,24 @@
 .navbar-wrapper{
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
-    position:relative;
+    padding:18px 32px;
 
-    padding:16px 30px;
+    background:rgba(251,187,179,.88);
 
-    background:#FBBBB3;
+    backdrop-filter:blur(16px);
 
-    border:3px solid #1F1F1F;
-    border-radius:28px;
+    -webkit-backdrop-filter:blur(16px);
 
-    box-shadow:8px 8px 0 #1F1F1F;
+    border:2px solid #111;
 
-    overflow:visible;
+    border-radius:999px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
 
 }
 
@@ -44,28 +47,75 @@
 
     display:flex;
     align-items:center;
+    gap:14px;
+
+    text-decoration:none;
+
+}
+
+.logo-dot{
+
+    width:18px;
+    height:18px;
+
+    border-radius:50%;
+
+    background:#111;
+
+    position:relative;
+
     flex-shrink:0;
 
 }
 
-.logo-text{
+.logo-dot::after{
 
-    font-size:28px;
-    font-weight:700;
-    color:#1F1F1F;
+    content:"";
 
-    font-family:
-    "Noto Serif SC",
-    "Noto Sans SC",
-    serif;
+    position:absolute;
 
-    transition:.3s;
+    width:8px;
+    height:8px;
+
+    background:#FFD84D;
+
+    border-radius:50%;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
 
 }
 
-.logo:hover .logo-text{
+.logo-content{
 
-    transform:translateY(-2px);
+    display:flex;
+    flex-direction:column;
+
+}
+
+.logo-name{
+
+    font-size:1.2rem;
+
+    font-weight:800;
+
+    color:#111;
+
+    letter-spacing:.5px;
+
+}
+
+.logo-role{
+
+    font-size:.72rem;
+
+    opacity:.6;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
 
 }
 
@@ -89,13 +139,17 @@
 
 .nav-links a{
 
+    position:relative;
+
     text-decoration:none;
+
     color:#222;
 
-    font-size:16px;
     font-weight:700;
 
-    position:relative;
+    padding:10px 14px;
+
+    border-radius:12px;
 
     transition:.3s;
 
@@ -103,35 +157,12 @@
 
 .nav-links a:hover{
 
-    color:#C7446F;
+    background:#fff7e9;
+
+    color:#111;
 
 }
 
-.nav-links a::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    bottom:-8px;
-
-    width:0;
-    height:3px;
-
-    background:#C7446F;
-
-    border-radius:999px;
-
-    transition:.3s;
-
-}
-
-.nav-links a:hover::after{
-
-    width:100%;
-
-}
 
 /* =========================================================
    RESUME BUTTON
@@ -139,22 +170,17 @@
 
 .resume-btn{
 
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
+    padding:12px 22px;
 
-    padding:12px 24px;
-
-    background:#FFF7E9;
-
-    border:3px solid #1F1F1F;
     border-radius:999px;
 
-    color:#111 !important;
+    border:2px solid #111;
 
-    font-weight:700;
+    background:#111;
 
-    box-shadow:5px 5px 0 #1F1F1F;
+    color:#fff !important;
+
+    box-shadow:none;
 
     transition:.3s;
 
@@ -162,11 +188,9 @@
 
 .resume-btn:hover{
 
-    background:#FFD54A;
+    transform:translateY(-2px);
 
-    transform:translate(-3px,-3px);
-
-    box-shadow:8px 8px 0 #1F1F1F;
+    background:#2b2b2b;
 
 }
 
@@ -238,44 +262,47 @@
 
     .nav-links{
 
-        position:absolute;
+    position:absolute;
 
-        top:calc(100% + 14px);
+    top:calc(100% + 16px);
 
-        left:0;
-        right:0;
+    left:0;
+    right:0;
 
-        width:100%;
+    width:100%;
 
-        display:flex;
-        flex-direction:column;
+    display:flex;
+    flex-direction:column;
 
-        align-items:center;
+    align-items:stretch;
 
-        gap:18px;
+    gap:10px;
 
-        padding:28px;
+    padding:18px;
 
-        background:#FBBBB3;
+    background:rgba(251,187,179,.96);
 
-        border:3px solid #1F1F1F;
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 
-        border-radius:24px;
+    border:2px solid #111;
 
-        box-shadow:8px 8px 0 #1F1F1F;
+    border-radius:22px;
 
-        opacity:0;
-        visibility:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
 
-        pointer-events:none;
+    opacity:0;
+    visibility:hidden;
 
-        transform:translateY(-15px);
+    pointer-events:none;
 
-        transition:.35s ease;
+    transform:translateY(-12px) scale(.98);
 
-        z-index:100000;
+    transition:all .35s ease;
 
-    }
+    z-index:100000;
+
+}
 
     .nav-links.active{
 
@@ -290,23 +317,34 @@
 
     .nav-links li{
 
-        width:100%;
+    width:100%;
 
-        text-align:center;
-
-    }
-
+}
     .nav-links a{
 
-        display:block;
+    display:flex;
 
-        width:100%;
+    align-items:center;
 
-        padding:12px;
+    justify-content:center;
 
-        font-size:18px;
+    width:100%;
 
-    }
+    padding:14px 18px;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    background:#FFF7E9;
+
+}
 
     .resume-btn{
 
