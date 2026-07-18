@@ -4,971 +4,386 @@
 ==================================================*/
 
 .case-hero{
-
     position:relative;
-
     overflow:hidden;
-
     padding:150px 0 110px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #FFFDF8 0%,
-            #FFF8F3 40%,
-            #FFFDF9 100%
-        );
-
-    isolation:isolate;
-
-}
-
-/*====================================
-        BACKGROUND BLOBS
-====================================*/
-
-.case-hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:700px;
-    height:700px;
-
-    left:-260px;
-    top:-240px;
-
-    border-radius:50%;
-
-    background:#FBBBB3;
-
-    opacity:.28;
-
-    filter:blur(170px);
-
-    z-index:-2;
-
-}
-
-.case-hero::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:650px;
-    height:650px;
-
-    right:-220px;
-    bottom:-260px;
-
-    border-radius:50%;
-
-    background:#7ADFFF;
-
-    opacity:.22;
-
-    filter:blur(170px);
-
-    z-index:-2;
-
-}
-
-/*====================================
-        TRANSPARENT CODE
-====================================*/
-
-.case-hero .code-bg{
-
-    position:absolute;
-
-    inset:0;
-
-    overflow:hidden;
-
-    pointer-events:none;
-
-    z-index:-1;
-
-}
-
-.case-hero .code-bg pre{
-
-    position:absolute;
-
-    top:-120px;
-    left:-120px;
-
-    white-space:pre;
-
-    font-family:
-    "Fira Code",
-    monospace;
-
-    font-size:20px;
-
-    line-height:2.1;
-
-    color:#000;
-
-    opacity:.055;
-
-    transform:
-        rotate(-18deg)
-        scale(1.45);
-
-    user-select:none;
-
-}
-
-/*====================================
-        GRID
-====================================*/
-
-.case-grid{
-
-    display:grid;
-
-    grid-template-columns:1.08fr .92fr;
-
-    align-items:center;
-
-    gap:90px;
-
-}
-
-/*====================================
-        LEFT
-====================================*/
-
-.case-content{
-
-    position:relative;
-
-    z-index:3;
-
-}
-
-.case-tag{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    padding:10px 22px;
-
-    border-radius:999px;
-
-    border:2px solid #111;
-
-    background:#fff;
-
-    font-size:.8rem;
-
-    font-weight:700;
-
-    letter-spacing:2px;
-
-    box-shadow:
-    6px 6px 0 #111;
-
-    margin-bottom:28px;
-
-}
-
-.case-tag::before{
-
-    content:"●";
-
-    color:#FF5D8F;
-
-}
-
-.case-content h1{
-
-    font-size:clamp(3.5rem,7vw,6rem);
-
-    line-height:.9;
-
-    letter-spacing:-3px;
-
-    font-weight:800;
-
-    color:#161616;
-
-    margin-bottom:26px;
-
-}
-
-.case-subtitle{
-
-    max-width:640px;
-
-    font-size:1.12rem;
-
-    line-height:2;
-
-    color:#555;
-
-}
-
-/*====================================
-        TERMINAL
-====================================*/
-
-.terminal-box{
-
-    margin:45px 0;
-
-    position:relative;
-
-    overflow:hidden;
-
-    border-radius:24px;
-
-    background:
-
-    linear-gradient(
-        180deg,
-        #151515,
-        #090909
-    );
-
-    border:1px solid rgba(255,255,255,.08);
-
-    box-shadow:
-
-    0 25px 55px rgba(0,0,0,.25);
-
-}
-
-.terminal-box::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    right:0;
-    top:0;
-
-    height:46px;
-
-    background:#202020;
-
-}
-
-.terminal-box::after{
-
-    content:"● ● ●";
-
-    position:absolute;
-
-    left:20px;
-    top:11px;
-
-    color:
-
-    #FF6A6A;
-
-    font-size:18px;
-
-    letter-spacing:7px;
-
-}
-
-.terminal-box pre{
-
-    margin:0;
-
-    padding:
-
-    70px 28px
-    28px;
-
-    overflow:auto;
-
-}
-
-.terminal-box code{
-
-    color:#7DFF90;
-
-    font-size:.95rem;
-
-    line-height:2;
-
-    font-family:
-    "Fira Code",
-    monospace;
-
-}
-
-/*====================================
-        BUTTONS
-====================================*/
-
-.project-links{
-
-    display:flex;
-
-    gap:18px;
-
-    flex-wrap:wrap;
-
-}
-
-.project-links .btn{
-
-    transition:.35s;
-
-}
-
-.project-links .btn:hover{
-
-    transform:
-
-    translateY(-6px);
-
-}
-
-/*==================================================
-            HERO IMAGE
-==================================================*/
-
-.case-image{
-
-    position:relative;
-
-}
-
-.case-image::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:-18px;
-
-    border-radius:42px;
-
     background:linear-gradient(
         135deg,
-        #FBBBB3,
-        #FFD86E,
-        #7DDCFF
+        #FFFDF8 0%,
+        #FFF8F3 40%,
+        #FFFDF9 100%
     );
-
-    z-index:-1;
-
-    filter:blur(30px);
-
-    opacity:.45;
-
+    isolation:isolate;
 }
 
-.case-image img{
+/* BACKGROUND BLOBS */
+.case-hero::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    left:-260px;
+    top:-240px;
+    border-radius:50%;
+    background:#FBBBB3;
+    opacity:.28;
+    filter:blur(170px);
+    z-index:-3;
+}
+.case-hero::after{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:650px;
+    right:-220px;
+    bottom:-260px;
+    border-radius:50%;
+    background:#7ADFFF;
+    opacity:.22;
+    filter:blur(170px);
+    z-index:-3;
+}
 
-    width:100%;
+/* TRANSPARENT CODE FIXED */
+.case-hero .code-bg{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-2; /* above blobs, below content */
+}
+.case-hero .code-bg pre{
+    position:absolute;
+    top:-120px;
+    left:-120px;
+    white-space:pre;
+    font-family:"Fira Code", monospace;
+    font-size:20px;
+    line-height:2.1;
+    color:#000;
+    opacity:.12; /* increased for visibility */
+    transform:rotate(-18deg) scale(1.45);
+    user-select:none;
+}
 
-    display:block;
+/* GRID */
+.case-grid{
+    display:grid;
+    grid-template-columns:1.08fr .92fr;
+    align-items:center;
+    gap:90px;
+}
 
-    border-radius:34px;
-
-    border:3px solid #111;
-
+/* LEFT CONTENT */
+.case-content{
+    position:relative;
+    z-index:3;
+}
+.case-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 22px;
+    border-radius:999px;
+    border:2px solid #111;
     background:#fff;
-
-    box-shadow:
-
-        0 35px 80px rgba(0,0,0,.16),
-
-        12px 12px 0 #111;
-
-    transition:.45s;
-
+    font-size:.8rem;
+    font-weight:700;
+    letter-spacing:2px;
+    box-shadow:6px 6px 0 #111;
+    margin-bottom:28px;
+}
+.case-tag::before{
+    content:"●";
+    color:#FF5D8F;
+}
+.case-content h1{
+    font-size:clamp(3.5rem,7vw,6rem);
+    line-height:.9;
+    letter-spacing:-3px;
+    font-weight:800;
+    color:#161616;
+    margin-bottom:26px;
+}
+.case-subtitle{
+    max-width:640px;
+    font-size:1.12rem;
+    line-height:2;
+    color:#555;
 }
 
+/* TERMINAL */
+.terminal-box{
+    margin:45px 0;
+    position:relative;
+    overflow:hidden;
+    border-radius:24px;
+    background:linear-gradient(180deg,#151515,#090909);
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 25px 55px rgba(0,0,0,.25);
+}
+.terminal-box::before{
+    content:"";
+    position:absolute;
+    left:0; right:0; top:0;
+    height:46px;
+    background:#202020;
+}
+.terminal-box::after{
+    content:"● ● ●";
+    position:absolute;
+    left:20px; top:11px;
+    color:#FF6A6A;
+    font-size:18px;
+    letter-spacing:7px;
+}
+.terminal-box pre{
+    margin:0;
+    padding:70px 28px 28px;
+    overflow:auto;
+}
+.terminal-box code{
+    color:#7DFF90;
+    font-size:.95rem;
+    line-height:2;
+    font-family:"Fira Code", monospace;
+}
+
+/* BUTTONS */
+.project-links{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+.project-links .btn{
+    transition:.35s;
+}
+.project-links .btn:hover{
+    transform:translateY(-6px);
+}
+
+/* HERO IMAGE */
+.case-image{
+    position:relative;
+}
+.case-image::before{
+    content:"🐱"; /* retro-modern cat emoji sticker */
+    position:absolute;
+    inset:-18px;
+    border-radius:42px;
+    background:linear-gradient(135deg,#FBBBB3,#FFD86E,#7DDCFF);
+    z-index:-1;
+    filter:blur(30px);
+    opacity:.45;
+    font-size:80px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.case-image img{
+    width:100%;
+    display:block;
+    border-radius:34px;
+    border:3px solid #111;
+    background:#fff;
+    box-shadow:0 35px 80px rgba(0,0,0,.16),12px 12px 0 #111;
+    transition:.45s;
+}
 .case-image img:hover{
-
-    transform:
-
-        translateY(-12px)
-        rotate(-1deg)
-        scale(1.02);
-
+    transform:translateY(-12px) rotate(-1deg) scale(1.02);
 }
 
 /*==================================================
             OVERVIEW
 ==================================================*/
-
 .project-overview{
-
     position:relative;
-
     padding:120px 0;
-
 }
-
 .content{
-
     position:relative;
-
     max-width:920px;
-
     margin:auto;
-
     padding:60px;
-
     border-radius:34px;
-
-    background:
-
-        rgba(255,255,255,.75);
-
+    background:rgba(255,255,255,.85);
     backdrop-filter:blur(16px);
-
     border:2px solid rgba(255,255,255,.65);
-
-    box-shadow:
-
-        0 25px 70px rgba(0,0,0,.08);
-
+    box-shadow:0 25px 70px rgba(0,0,0,.08);
 }
-
 .content::before{
-
     content:"";
-
     position:absolute;
-
-    top:-12px;
-    left:-12px;
-
-    width:100%;
-    height:100%;
-
+    top:-12px; left:-12px;
+    width:100%; height:100%;
     border:2px dashed #111;
-
     border-radius:34px;
-
     z-index:-1;
-
 }
-
 .section-title{
-
     display:inline-block;
-
     margin-bottom:28px;
-
     padding:10px 22px;
-
     border-radius:999px;
-
     background:#FBBBB3;
-
     border:2px solid #111;
-
     font-size:.82rem;
-
     font-weight:700;
-
     letter-spacing:2px;
-
     box-shadow:5px 5px 0 #111;
-
 }
-
 .content p{
-
     color:#444;
-
     font-size:1.08rem;
-
     line-height:2;
-
     margin-bottom:28px;
-
 }
+.content ul{margin-top:25px; padding-left:22px;}
+.content li{margin-bottom:15px; line-height:1.9;}
 
-.content ul{
-
-    margin-top:25px;
-
-    padding-left:22px;
-
-}
-
-.content li{
-
-    margin-bottom:15px;
-
-    line-height:1.9;
-
-}
-
-/*==================================================
-            GALLERY
-==================================================*/
-
-.project-gallery{
-
-    padding:120px 0;
-
-}
-
-.heading{
-
-    margin-bottom:60px;
-
-    text-align:center;
-
-}
-
-.heading h2{
-
-    margin-top:18px;
-
-    font-size:clamp(2rem,4vw,3rem);
-
-}
-
-.bento-gallery{
-
-    column-count:3;
-
-    column-gap:26px;
-
-}
-
+/* GALLERY */
+.project-gallery{padding:120px 0; position:relative;}
+.heading{margin-bottom:60px; text-align:center;}
+.heading h2{margin-top:18px; font-size:clamp(2rem,4vw,3rem);}
+.bento-gallery{column-count:3; column-gap:26px;}
 .bento-item{
-
     break-inside:avoid;
-
     margin-bottom:26px;
-
     overflow:hidden;
-
     border-radius:28px;
-
     background:#fff;
-
     border:2px solid #111;
-
-    box-shadow:
-
-        0 18px 45px rgba(0,0,0,.10);
-
+    box-shadow:0 18px 45px rgba(0,0,0,.10);
     transition:.35s;
-
 }
-
 .bento-item:hover{
-
-    transform:
-
-        translateY(-10px)
-        rotate(-1deg);
-
-    box-shadow:
-
-        14px 14px 0 #111;
-
+    transform:translateY(-10px) rotate(-1deg);
+    box-shadow:14px 14px 0 #111;
 }
-
-.bento-item img{
-
-    width:100%;
-
-    display:block;
-
-    transition:.5s;
-
-}
-
-.bento-item:hover img{
-
-    transform:scale(1.05);
-
-}
-
+.bento-item img{width:100%; display:block; transition:.5s;}
+.bento-item:hover img{transform:scale(1.05);}
 .gallery-caption{
-
     padding:22px;
-
     font-size:.95rem;
-
     line-height:1.8;
-
     color:#555;
-
     background:#fffdf8;
-
 }
 
-/*==================================================
-            TECH STACK
-==================================================*/
-
-.tech-section{
-
-    padding:120px 0;
-
-}
-
-.tech-list{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:18px;
-
-    margin-top:35px;
-
-}
-
+/* TECH STACK */
+.tech-section{padding:120px 0;}
+.tech-list{display:flex; flex-wrap:wrap; gap:18px; margin-top:35px;}
 .tech-list span{
-
     padding:14px 24px;
-
     border-radius:999px;
-
     background:#fff;
-
     border:2px solid #111;
-
     font-weight:700;
-
     font-size:.95rem;
-
-    box-shadow:
-
-        6px 6px 0 #111;
-
+    box-shadow:6px 6px 0 #111;
     transition:.35s;
-
 }
-
 .tech-list span:hover{
-
     background:#FBBBB3;
-
-    transform:
-
-        translateY(-6px)
-        rotate(-2deg);
-
-    box-shadow:
-
-        10px 10px 0 #111;
-
+    transform:translateY(-6px) rotate(-2deg);
+    box-shadow:10px 10px 0 #111;
 }
 
-/*==================================================
-            FLOATING STICKERS
-==================================================*/
-
+/* FLOATING STICKERS */
 .project-gallery::before{
-
     content:"</>";
-
     position:absolute;
-
-    left:8%;
-
-    top:20%;
-
+    left:8%; top:20%;
     font-size:130px;
-
     font-weight:800;
-
     color:#000;
-
-    opacity:.03;
-
+    opacity:.05;
     transform:rotate(-18deg);
-
     pointer-events:none;
-
 }
-
 .project-gallery::after{
-
     content:"{ }";
-
     position:absolute;
-
-    right:8%;
-
-    bottom:10%;
-
+    right:8%; bottom:10%;
     font-size:160px;
-
     font-weight:800;
-
     color:#000;
-
-    opacity:.03;
-
+    opacity:.05;
     transform:rotate(18deg);
-
     pointer-events:none;
-
 }
 
-/*==================================================
-            LIGHTBOX
-==================================================*/
-
+/* LIGHTBOX */
 .lightbox{
-
     position:fixed;
-
     inset:0;
-
     background:rgba(10,10,10,.93);
-
     backdrop-filter:blur(8px);
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     z-index:999999;
-
     padding:40px;
-
     cursor:zoom-out;
-
     animation:fadeIn .3s ease;
-
 }
-
 .lightbox img{
-
     max-width:92%;
-
     max-height:90vh;
-
     border-radius:28px;
-
     border:3px solid #fff;
-
-    box-shadow:
-
-        0 35px 80px rgba(0,0,0,.45);
-
+    box-shadow:0 35px 80px rgba(0,0,0,.45);
 }
-
 @keyframes fadeIn{
-
-    from{
-
-        opacity:0;
-
-    }
-
-    to{
-
-        opacity:1;
-
-    }
-
+    from{opacity:0;}
+    to{opacity:1;}
 }
 
-/*==================================================
-            SCROLL ANIMATION
-==================================================*/
-
+/* SCROLL ANIMATION */
 .case-content,
 .case-image,
 .content,
 .bento-item,
 .tech-list span{
-
     animation:fadeUp .8s ease both;
-
 }
-
 @keyframes fadeUp{
-
     from{
-
         opacity:0;
-
-        transform:
-
-            translateY(35px);
-
+        transform:translateY(35px);
     }
-
     to{
-
         opacity:1;
-
-        transform:
-
-            translateY(0);
-
+        transform:translateY(0);
     }
-
 }
 
-/*==================================================
-            RESPONSIVE
-==================================================*/
-
+/* RESPONSIVE */
 @media(max-width:992px){
-
-    .case-grid{
-
-        grid-template-columns:1fr;
-
-        gap:55px;
-
-    }
-
-    .case-image{
-
-        order:-1;
-
-    }
-
-    .case-content{
-
-        text-align:center;
-
-    }
-
-    .case-subtitle{
-
-        margin:auto;
-
-    }
-
-    .project-links{
-
-        justify-content:center;
-
-    }
-
-    .content{
-
-        padding:40px;
-
-    }
-
-    .bento-gallery{
-
-        column-count:2;
-
-    }
-
+    .case-grid{grid-template-columns:1fr; gap:55px;}
+    .case-image{order:-1;}
+    .case-content{text-align:center;}
+    .case-subtitle{margin:auto;}
+    .project-links{justify-content:center;}
+    .content{padding:40px;}
+    .bento-gallery{column-count:2;}
 }
-
 @media(max-width:768px){
-
-    .case-hero{
-
-        padding:120px 0 80px;
-
-    }
-
-    .case-content h1{
-
-        font-size:2.9rem;
-
-        letter-spacing:-2px;
-
-    }
-
-    .terminal-box{
-
-        margin:35px 0;
-
-    }
-
-    .content{
-
-        padding:30px;
-
-        border-radius:24px;
-
-    }
-
-    .project-links{
-
-        flex-direction:column;
-
-    }
-
-    .project-links .btn{
-
-        width:100%;
-
-    }
-
-    .bento-gallery{
-
-        column-count:1;
-
-    }
-
-    .gallery-caption{
-
-        padding:18px;
-
-    }
-
-    .tech-list{
-
-        justify-content:center;
-
-    }
-
+    .case-hero{padding:120px 0 80px;}
+    .case-content h1{font-size:2.9rem; letter-spacing:-2px;}
+    .terminal-box{margin:35px 0;}
+    .content{padding:30px; border-radius:24px;}
+    .project-links{flex-direction:column;}
+    .project-links .btn{width:100%;}
+    .bento-gallery{column-count:1;}
+    .gallery-caption{padding:18px;}
+    .tech-list{justify-content:center;}
 }
-
 @media(max-width:500px){
-
-    .case-content h1{
-
-        font-size:2.3rem;
-
-    }
-
-    .terminal-box pre{
-
-        padding:
-
-            65px 20px
-            20px;
-
-    }
-
-    .terminal-box code{
-
-        font-size:.82rem;
-
-    }
-
-    .content{
-
-        padding:24px;
-
-    }
-
-    .section-title{
-
-        font-size:.75rem;
-
-    }
-
+    .case-content h1{font-size:2.3rem;}
+    .terminal-box pre{padding:65px 20px 20px;}
+    .terminal-box code{font-size:.82rem;}
+    .content{padding:24px;}
+    .section-title{font-size:.75rem;}
 }
+
