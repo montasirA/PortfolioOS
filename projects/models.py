@@ -1,14 +1,10 @@
 from django.db import models
-
-# Create your models here.
-from django.db import models
+from django.utils.text import slugify
 
 
 class Project(models.Model):
 
-    title = models.CharField(
-        max_length=200
-    )
+    title = models.CharField(max_length=200)
 
     slug = models.SlugField(
         unique=True,
@@ -28,39 +24,31 @@ class Project(models.Model):
         help_text="Example: Django, Python, PostgreSQL"
     )
 
-    github_link = models.URLField(
-        blank=True
-    )
+    github_link = models.URLField(blank=True)
 
-    live_demo = models.URLField(
-        blank=True
-    )
+    live_demo = models.URLField(blank=True)
 
-    featured = models.BooleanField(
-        default=False
-    )
+    featured = models.BooleanField(default=False)
 
-    display_order = models.PositiveIntegerField(
-        default=0
-    )
+    display_order = models.PositiveIntegerField(default=0)
 
-    created_at = models.DateTimeField(
-        auto_now_add=True
-    )
+    created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ["display_order"]
 
     def save(self, *args, **kwargs):
-
-        from django.utils.text import slugify
-
         if not self.slug:
             self.slug = slugify(self.title)
 
         super().save(*args, **kwargs)
 
+    def __str__(self):
+        return self.title
+
+
 class ProjectImage(models.Model):
+
     project = models.ForeignKey(
         Project,
         on_delete=models.CASCADE,
@@ -84,8 +72,6 @@ class ProjectImage(models.Model):
         ordering = ["display_order"]
 
     def __str__(self):
-        return f"{self.project.title} Image"
-
-    def __str__(self):
-        return self.title
-
+        if self.caption:
+            return f"{self.project.title} - {self.caption}"
+        return f"{self.project.title} - Image {self.pk}"
