@@ -1,30 +1,28 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>
-        {% block title %}Portfolio OS{% endblock %}
-    </title>
+    <head>
 
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/now.css' %}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Page Specific CSS -->
-    {% block extra_css %}
-    {% endblock %}
+<title>{% block title %}Portfolio{% endblock %}</title>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/now.css' %}">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{% block extra_css %}
+{% endblock %}
 
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -40,5 +38,4 @@
     <script src="{% static 'js/main.js' %}"></script>
 
 </body>
-
 </html>
